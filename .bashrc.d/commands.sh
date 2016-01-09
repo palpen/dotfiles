@@ -5,7 +5,7 @@ alias sleep='pmset sleepnow'
 
 #open bash profile
 alias bp='sbl ~/.bashrc.d/original.sh;echo “Opening bash profile”'
-alias bpd='cd ~/.bashrc.d'
+alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 
 # directory navigation
 alias cpp='pwd | pbcopy;echo “copied path:”;pwd'
@@ -17,7 +17,7 @@ alias c...='cd ../../..'
 alias ocf='open .'
 
 # User settings in Sublime text (contains snippets)
-alias stset='cd /Users/palermospenano/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;pwd'
+alias stset='cd /Users/palermospenano/Library/Application\ Support/Sublime\ Text\ 3/Packages/User;pwd'
 
 # turn off wifi
 alias woff='networksetup -setairportpower en0 off;echo "Turning wifi off"'
