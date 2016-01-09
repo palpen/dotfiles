@@ -4,7 +4,7 @@
 alias sleep='pmset sleepnow'
 
 #open bash profile
-alias bp='sbl ~/.bashrc.d/original.sh;echo “Opening bash profile”'
+alias bp='sbl ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d/commands.sh;echo “Opening bash profile”'
 alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 
 # directory navigation
