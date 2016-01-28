@@ -66,8 +66,8 @@ prompt_cmd () {
         PS1+="$COLOR_BLUE"
     fi
     PS1+="\u"
-    PS1+="$COLOR_WHITE@"
-    PS1+="$COLOR_GREEN\h"
+    # PS1+="$COLOR_WHITE@"
+    # PS1+="$COLOR_GREEN\h"
     PS1+="$COLOR_WHITE:"
     PS1+="$COLOR_YELLOW\W"
     # Add git branch and status if applicable
