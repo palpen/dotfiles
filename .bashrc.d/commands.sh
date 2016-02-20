@@ -7,7 +7,7 @@ alias sleep='pmset sleepnow'
 alias bp='sbl ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d/commands.sh;echo “Opening bash profile”'
 alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 
-# directory navigation
+# directory navigation + other
 alias cpp='pwd | pbcopy;echo “copied path:”;pwd'
 alias cdesk='cd /Users/palermospenano/Desktop;pwd'
 alias db='cd /Users/palermospenano/Desktop/Dropbox;pwd'
@@ -15,6 +15,7 @@ alias c.='cd ..'
 alias c..='cd ../..'
 alias c...='cd ../../..'
 alias ocf='open .'
+alias c='clear'
 
 # User settings in Sublime text (contains snippets)
 alias stset='cd /Users/palermospenano/Library/Application\ Support/Sublime\ Text\ 3/Packages/User;pwd'

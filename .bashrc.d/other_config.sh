@@ -13,8 +13,8 @@ export PATH=$PATH:"../../Applications/LyX.app/Contents/MacOS"
 # enable tab cycling to autocomplete
 bind TAB:menu-complete
 
-
-
+# Ruby jekyll mac os x el capitan --- all that stuff
+export PATH=/usr/local/bin:$PATH
 
 
 
