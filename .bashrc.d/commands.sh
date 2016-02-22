@@ -76,6 +76,9 @@ alias sub='open -a "/Applications/Sublime Text.app" '
 alias t='/Users/palermospenano/Desktop/Dropbox/todo/todo.sh'
 alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-tasks-from-the-command-line'
 
+# misc
+alias work='~/Desktop/Dropbox/funfolder/blacklist_selfcontrol_websites.selfcontrol'  # activate SelfControl and block out blacklisted sites
+
 ##################
 # Misc Functions #
 ##################
@@ -92,9 +95,9 @@ set_term_title(){
 }
 alias tn='set_term_title '
 
-#################
-# misc commands #
-#################
+#########
+# notes #
+#########
 
 # sublime FILENAME  (open a file in sublime text: https://gist.github.com/artero/1236170)
 # source ~/.bashrc.d/original.sh (reloads bash profiles)
