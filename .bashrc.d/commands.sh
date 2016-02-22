@@ -76,8 +76,39 @@ alias sub='open -a "/Applications/Sublime Text.app" '
 alias t='/Users/palermospenano/Desktop/Dropbox/todo/todo.sh'
 alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-tasks-from-the-command-line'
 
-# misc
-alias work='~/Desktop/Dropbox/funfolder/blacklist_selfcontrol_websites.selfcontrol'  # activate SelfControl and block out blacklisted sites
+
+########
+# misc #
+########
+
+# block out distracting websites for fixed duration (to block an hour execute `work 1` in command line)
+# Only good for 1, 2, or 3 hours
+work() {
+	if [ $1 == 1 ]
+	then
+		WORK_TIME=60
+	elif [ $1 == 2 ]
+	then
+		WORK_TIME=120
+	elif [ $1 == 3 ]
+	then
+		WORK_TIME=180
+	fi
+
+	echo "Blocking out distracting websites for $1 hour(s)"
+	defaults read org.eyebeam.SelfControl;defaults write org.eyebeam.SelfControl BlockDuration -int $WORK_TIME
+	defaults write org.eyebeam.SelfControl HostBlacklist -array "www.andrewgelman.com" "news.ycombinator.com" "www.quora.com" "www.marginalrevolution.com" "www.nytimes.com" "www.bleacherreport.com" "www.amazon.ca" "www.amazon.com" "www.youtube.com" "www.nba.com"
+	sudo /Applications/SelfControl.app/Contents/MacOS/org.eyebeam.SelfControl $(id -u $(whoami)) --install
+}
+
+# set number of minutes to block out distracting sites
+workc() {
+	echo "Blocking out distracting websites for $1 minutes"
+	defaults read org.eyebeam.SelfControl;defaults write org.eyebeam.SelfControl BlockDuration -int $1
+	defaults write org.eyebeam.SelfControl HostBlacklist -array "www.andrewgelman.com" "news.ycombinator.com" "www.quora.com" "www.marginalrevolution.com" "www.nytimes.com" "www.bleacherreport.com" "www.amazon.ca" "www.amazon.com" "www.youtube.com" "www.nba.com"
+	sudo /Applications/SelfControl.app/Contents/MacOS/org.eyebeam.SelfControl $(id -u $(whoami)) --install
+}
+
 
 ##################
 # Misc Functions #
@@ -101,3 +132,4 @@ alias tn='set_term_title '
 
 # sublime FILENAME  (open a file in sublime text: https://gist.github.com/artero/1236170)
 # source ~/.bashrc.d/original.sh (reloads bash profiles)
+# remove alias: unalias ALIASNAME
