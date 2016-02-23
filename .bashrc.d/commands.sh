@@ -81,7 +81,12 @@ alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-
 # misc #
 ########
 
-# block out distracting websites for fixed duration (to block an hour execute `work 1` in command line)
+
+# block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
+
+# list of websites to block
+BAD_WEBSITES=('"www.andrewgelman.com"' '"news.ycombinator.com"' '"www.quora.com"' '"www.marginalrevolution.com"' '"www.nytimes.com"' '"www.bleacherreport.com"' '"www.amazon.ca"' '"www.amazon.com"' '"www.youtube.com"' '"www.nba.com"')
+
 # Only good for 1, 2, or 3 hours
 work() {
 	if [ $1 == 1 ]
@@ -97,7 +102,7 @@ work() {
 
 	echo "Blocking out distracting websites for $1 hour(s)"
 	defaults read org.eyebeam.SelfControl;defaults write org.eyebeam.SelfControl BlockDuration -int $WORK_TIME
-	defaults write org.eyebeam.SelfControl HostBlacklist -array "www.andrewgelman.com" "news.ycombinator.com" "www.quora.com" "www.marginalrevolution.com" "www.nytimes.com" "www.bleacherreport.com" "www.amazon.ca" "www.amazon.com" "www.youtube.com" "www.nba.com"
+	defaults write org.eyebeam.SelfControl HostBlacklist -array ${BAD_WEBSITES[*]}
 	sudo /Applications/SelfControl.app/Contents/MacOS/org.eyebeam.SelfControl $(id -u $(whoami)) --install
 }
 
@@ -105,7 +110,7 @@ work() {
 workc() {
 	echo "Blocking out distracting websites for $1 minutes"
 	defaults read org.eyebeam.SelfControl;defaults write org.eyebeam.SelfControl BlockDuration -int $1
-	defaults write org.eyebeam.SelfControl HostBlacklist -array "www.andrewgelman.com" "news.ycombinator.com" "www.quora.com" "www.marginalrevolution.com" "www.nytimes.com" "www.bleacherreport.com" "www.amazon.ca" "www.amazon.com" "www.youtube.com" "www.nba.com"
+	defaults write org.eyebeam.SelfControl HostBlacklist -array ${BAD_WEBSITES[*]}
 	sudo /Applications/SelfControl.app/Contents/MacOS/org.eyebeam.SelfControl $(id -u $(whoami)) --install
 }
 
