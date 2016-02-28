@@ -76,6 +76,17 @@ alias sub='open -a "/Applications/Sublime Text.app" '
 alias t='/Users/palermospenano/Desktop/Dropbox/todo/todo.sh'
 alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-tasks-from-the-command-line'
 
+# Fuzzy search in terminal using fzf!
+
+# fd - cd to selected directory
+# usage: enter `fd`, then search the directory you want to be in, then enter
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
 
 ########
 # misc #
