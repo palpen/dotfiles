@@ -10,7 +10,7 @@ alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 # directory navigation + other
 alias cpp='pwd | pbcopy;echo “copied path:”;pwd'
 alias cdesk='cd /Users/palermospenano/Desktop;pwd'
-alias db='cd /Users/palermospenano/Desktop/Dropbox;pwd'
+alias cdx='cd /Users/palermospenano/Desktop/Dropbox;pwd'
 alias c.='cd ..'
 alias c..='cd ../..'
 alias c...='cd ../../..'
