@@ -12,7 +12,6 @@ alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 alias cpp='pwd | pbcopy;echo “copied path:”;pwd'
 alias cdesk='cd /Users/palermospenano/Desktop;pwd'
 alias cdx='cd /Users/palermospenano/Desktop/Dropbox;pwd'
-function cdl() { cd "$@" && l; }  # cd and ls together
 alias c.='cd ..'
 alias c..='cd ../..'
 alias c...='cd ../../..'
@@ -101,6 +100,8 @@ cdf() {
 # misc #
 ########
 
+# cd and ls together
+function cdl() { cd "$@" && l; }
 
 # block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
 
