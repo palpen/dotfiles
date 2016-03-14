@@ -149,6 +149,7 @@ alias cf='copyfilename '
 # copy full path of file to clipboard
 function fp() {
     echo `pwd`/"$1" | pbcopy
+    echo "Copied full path of file: $1"
 }
 
 # Set Terminal window name
