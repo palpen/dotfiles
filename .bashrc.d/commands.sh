@@ -146,6 +146,11 @@ copyfilename() {
 }
 alias cf='copyfilename '
 
+# copy full path of file to clipboard
+function fp() {
+    echo `pwd`/"$1" | pbcopy
+}
+
 # Set Terminal window name
 set_term_title(){
    echo -en "\033]0;$1\a"
