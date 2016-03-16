@@ -9,7 +9,7 @@ alias bpw='sub /Users/palermospenano/Desktop/Dropbox/misc/dotfiles/.bashrc.d/pri
 alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 
 # directory navigation + other
-alias cpp='pwd | pbcopy;echo “copied path:”;pwd'
+alias cpp='echo -n `pwd` | pbcopy;echo “copied path:”;pwd'
 alias cdesk='cd /Users/palermospenano/Desktop;pwd'
 alias cdx='cd /Users/palermospenano/Desktop/Dropbox;pwd'
 alias c.='cd ..'
@@ -141,14 +141,14 @@ workc() {
 ##################
 # copy a filename to clipboard
 copyfilename() {
-    printf '%s\n' * | grep $1 | pbcopy
+    printf '%s\n' * | grep $1 | tr -d "\n" | pbcopy
     echo "Copied filename of: $1"
 }
 alias cf='copyfilename '
 
 # copy full path of file to clipboard
 function fp() {
-    echo `pwd`/"$1" | pbcopy
+    echo -n `pwd`/"$1" | pbcopy
     echo "Copied full path of file: $1"
 }
 
