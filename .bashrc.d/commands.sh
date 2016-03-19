@@ -64,7 +64,7 @@ alias exl='open -a "Microsoft Excel"'
 # Stata
 alias pado='cd "/Users/palermospenano/Library/Application Support/Stata/ado/personal";echo "Directory containing personal ado files"'
 # open stata and cd into current directory
-alias tstata='/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp'  # stata in terminal
+alias tstata='/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp'  # stata in terminal (run dofiles in terminal: tstata do my_script.do)
 alias stata='echo "Opening Stata for directory: "; pwd; /Applications/Stata/StataMP.app/Contents/MacOS/StataMP &'  # stata GUI
 
 # sublime text shortcuts
