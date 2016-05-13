@@ -139,6 +139,7 @@ workc() {
 ##################
 # Misc Functions #
 ##################
+
 # copy a filename to clipboard
 copyfilename() {
     printf '%s\n' * | grep $1 | tr -d "\n" | pbcopy
@@ -157,6 +158,23 @@ set_term_title(){
    echo -en "\033]0;$1\a"
 }
 alias tn='set_term_title '
+
+
+# compile lyx document
+# usage: clyx <lyx document with extension> <path to destination folder>
+clyx(){
+
+    DOC_NAME="$1"
+    DESTINATION_PATH="$2"
+
+    FILENAME=$(basename "$DOC_NAME")
+    FILENAME="${FILENAME%.*}"
+    echo $FILENAME
+
+    /Applications/LyX.app/Contents/MacOS/lyx -e pdf2 "$DOC_NAME"
+    mv "./$FILENAME.pdf" "$DESTINATION_PATH/$FILENAME.pdf"
+
+}
 
 #########
 # notes #
