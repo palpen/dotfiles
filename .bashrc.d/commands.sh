@@ -30,8 +30,9 @@ alias src='source ~/.bashrc; echo "New aliasses now activated!"'
 
 # list current directory in detail---must install GNU Command Line Tools
 # alias la='gls --color -altX'
-alias la='gls --color -lXa | awk "{print \$6, \$7, \$8, \$9}" | column -t'
 alias l='gls --color -tltX | awk "{print \$6, \$7, \$8, \$9}" | column -t'
+alias lm='gls --color -tl'  # list in order created
+alias la='gls --color -lXa | awk "{print \$6, \$7, \$8, \$9}" | column -t'
 alias ld='echo "$(tput setaf 1)Folders in directory:$(tput setaf 4)";ls -d */ | cut -f1 -d'/''  # list directories in folders
 
 # danger alert
