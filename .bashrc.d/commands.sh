@@ -77,7 +77,12 @@ alias sub='open -a "/Applications/Sublime Text.app" '
 alias t='/Users/palermospenano/Desktop/Dropbox/todo/todo.sh'
 alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-tasks-from-the-command-line'
 
-# Fuzzy search in terminal using fzf (functions are from fzf wiki on GitHub)!
+
+###############
+## Functions ##
+###############
+
+## Fuzzy search in terminal using fzf (functions are from fzf wiki on GitHub)!
 
 # fd - cd to selected directory
 # usage: enter `fd`, then search the directory you want to be in, then enter
@@ -96,14 +101,12 @@ cdf() {
    file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
 }
 
-########
-# misc #
-########
 
-# cd and ls together
+## cd and ls together
 function cdl() { cd "$@" && l; }
 
-# block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
+
+## block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
 
 # list of websites to block
 BAD_WEBSITES=('"www.andrewgelman.com"' '"news.ycombinator.com"' '"www.quora.com"' '"www.marginalrevolution.com"' '"www.nytimes.com"' '"www.bleacherreport.com"' '"www.amazon.ca"' '"www.amazon.com"' '"www.youtube.com"' '"www.nba.com"')
@@ -136,31 +139,28 @@ workc() {
 }
 
 
-##################
-# Misc Functions #
-##################
-
-# copy a filename to clipboard
+## copy a filename to clipboard
 copyfilename() {
     printf '%s\n' * | grep $1 | tr -d "\n" | pbcopy
     echo "Copied filename of: $1"
 }
 alias cf='copyfilename '
 
-# copy full path of file to clipboard
+
+## copy full path of file to clipboard
 function fp() {
     echo -n `pwd`/"$1" | pbcopy
     echo "Copied full path of file: $1"
 }
 
-# Set Terminal window name
+## Set Terminal window name
 set_term_title(){
    echo -en "\033]0;$1\a"
 }
 alias tn='set_term_title '
 
 
-# compile lyx document
+## compile lyx document
 # usage: clyx <lyx document with extension> <path to destination folder>
 clyx(){
 
