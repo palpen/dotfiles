@@ -44,7 +44,7 @@ alias ejd='osascript -e "tell application \"Finder\" to eject (every disk whose 
 
 # git
 alias ga='git add '
-alias gs='git status'
+alias gst='git status'
 alias gss='git status -s'  # short format
 alias gc='git commit -m'
 alias gull='git pull origin'

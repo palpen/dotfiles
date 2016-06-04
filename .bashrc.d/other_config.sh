@@ -16,7 +16,8 @@ bind TAB:menu-complete
 # Ruby jekyll mac os x el capitan --- all that stuff
 export PATH=/usr/local/bin:$PATH
 
-
+# allows pandoc to work in sublime text
+export PATH=$PATH:Library/TeX/texbin
 
 
 
