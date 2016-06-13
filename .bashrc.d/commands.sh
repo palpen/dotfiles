@@ -59,8 +59,9 @@ alias lgr='echo "Listing your github repositories";curl https://api.github.com/u
 alias lgrh='echo "List GitHub clone url";curl https://api.github.com/users/palpen/repos | grep  -o "https://github.com/[^\"]*\.git"'
 
 # csvkit --- TO ADD
-#csvlook, csvlook | grep, csvlook | head, csvcut,
+# csvlook, csvlook | grep, csvlook | head, csvcut,
 alias cl='csvlook '
+alias cld='csvlook -d '  # usage: cld "|" filename.txt
 
 # open in excel: usage "$exl my_data.csv"
 alias exl='open -a "Microsoft Excel"'
