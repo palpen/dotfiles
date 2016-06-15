@@ -9,3 +9,22 @@ To use this, download the repository to Dropbox then create a symbolic link of .
     ln -s ~/Desktop/Dropbox/dotfiles/.bashrc.d
 
 (note: I moved my Dropbox folder to the Desktop)
+
+____
+
+#### A better way to view files on Finder from Terminal
+Reference: [Will Robertson](http://willwont.blogspot.ca/2014/05/open-finder-window-from-terminal.html)
+
+1. Create a text file with
+
+    >\#!/bin/bash
+    >osascript -e "tell application \"Finder\" to activate" \
+      -e "tell application \"Finder\" to set the folder of the front window to POSIX file \"\`pwd\`\" " > /dev/null
+
+in it. Save is as `fin` (no extension)
+2. Place `fin` in the usr/local/bin directory
+3. Give `fin` the proper executable permission by entering the following in terminal
+
+    chmod +x fin
+
+Enter `fin` in Terminal and the current directory should open in a Finder window that's already open (instead of a *new* Finder window, which is the case with `open .`).
