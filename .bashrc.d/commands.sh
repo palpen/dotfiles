@@ -18,7 +18,6 @@ alias cdx='cd /Users/palermospenano/Desktop/Dropbox;pwd'
 alias c.='cd ..'
 alias c..='cd ../..'
 alias c...='cd ../../..'
-alias ocf='open .'
 alias c='clear'
 
 # User settings in Sublime text (contains snippets)
