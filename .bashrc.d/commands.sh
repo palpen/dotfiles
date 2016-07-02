@@ -19,6 +19,9 @@ alias c.='cd ..'
 alias c..='cd ../..'
 alias c...='cd ../../..'
 alias c='clear'
+alias c-='cd -'  # return to previous directory
+alias p='pushd'
+alias o='popd'
 
 # User settings in Sublime text (contains snippets)
 alias stset='cd /Users/palermospenano/Library/Application\ Support/Sublime\ Text\ 3/Packages/User;pwd'
