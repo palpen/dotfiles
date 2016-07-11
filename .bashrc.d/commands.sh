@@ -42,6 +42,7 @@ alias ld='echo "$(tput setaf 1)Folders in directory:$(tput setaf 4)";ls -d */ | 
 
 # danger alert
 alias rm='rm -i'
+alias rmd='rm -r'  # remove files from a directory recursively
 alias mv='mv -i'
 
 # eject external hardrive
