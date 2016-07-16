@@ -87,6 +87,9 @@ alias t='/Users/palermospenano/Desktop/Dropbox/todo/todo.sh'
 alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-tasks-from-the-command-line'
 
 
+# vim reference using fzf (needs a text file containing vim keys)
+alias vimr='cat ~/Desktop/Dropbox/misc/vim_shortcuts_ref/vim_shortcuts.txt | fzf'
+
 ###############
 ## Functions ##
 ###############
@@ -118,7 +121,7 @@ function cdl() { cd "$@" && l; }
 ## block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
 
 # list of websites to block
-BAD_WEBSITES=('"www.andrewgelman.com"' '"news.ycombinator.com"' '"www.quora.com"' '"www.marginalrevolution.com"' '"www.nytimes.com"' '"www.bleacherreport.com"' '"www.amazon.ca"' '"www.amazon.com"' '"www.youtube.com"' '"www.nba.com"')
+BAD_WEBSITES=('"www.andrewgelman.com"' '"news.ycombinator.com"' '"www.quora.com"' '"www.marginalrevolution.com"' '"www.nytimes.com"' '"www.bleacherreport.com"' '"www.amazon.ca"' '"www.amazon.com"' '"www.youtube.com"' '"www.nba.com"' '"www.netflix.ca"')
 
 # Only good for 1, 2, or 3 hours
 work() {
