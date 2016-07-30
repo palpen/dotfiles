@@ -2,6 +2,7 @@
 
 #put mac to sleep
 alias sleep='pmset sleepnow'
+alias ss='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 
 #open bash profile
 alias bp='sbl ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d/commands.sh;echo “Opening bash profile”'
