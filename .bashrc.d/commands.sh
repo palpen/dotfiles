@@ -77,6 +77,9 @@ alias pado='cd "/Users/palermospenano/Library/Application Support/Stata/ado/pers
 alias tstata='/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp'  # stata in terminal (run dofiles in terminal: tstata do my_script.do)
 alias stata='echo "Opening Stata for directory: "; pwd; /Applications/Stata/StataMP.app/Contents/MacOS/StataMP &'  # stata GUI
 
+# ipython
+alias ipn='ipython notebook'
+
 # sublime text shortcuts
 alias sbl='open -a "/Applications/Sublime Text.app" '
 alias subl='open -a "/Applications/Sublime Text.app" '
