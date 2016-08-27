@@ -11,6 +11,7 @@ alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 
 # basic calculator with math library
 alias bc='bc -l'
+alias foldersz='du -hs'
 
 # directory navigation + other
 alias cpp='echo -n `pwd` | pbcopy;echo “copied path:”;pwd'
