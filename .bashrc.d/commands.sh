@@ -9,9 +9,8 @@ alias bp='sbl ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d/commands.sh;echo “Open
 alias bpw='sub /Users/palermospenano/Desktop/Dropbox/misc/dotfiles/.bashrc.d/private_work.sh; echo "Opening work aliases"'
 alias bpd='cd ~/Desktop/Dropbox/misc/dotfiles/.bashrc.d'
 
-# basic calculator with math library
-alias bc='bc -l'
-alias foldersz='du -hs'
+alias bc='bc -l'  # basic calculator with math library
+alias foldersz='du -hs'  # get folder size
 
 # directory navigation + other
 alias cpp='echo -n `pwd` | pbcopy;echo “copied path:”;pwd'
