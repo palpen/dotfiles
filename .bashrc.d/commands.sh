@@ -100,6 +100,18 @@ alias vimr='cat ~/Desktop/Dropbox/misc/vim_shortcuts_ref/vim_shortcuts.txt | fzf
 
 ## Fuzzy search in terminal using fzf (functions are from fzf wiki on GitHub)!
 
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+# GET THIS TO WORK WITH SUBLIME TEXT !!!
+fe() {
+  IFS='
+'
+  local declare files=($(fzf --query="$1" --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+  unset IFS
+}
+
 # fd - cd to selected directory
 # usage: enter `fd`, then search the directory you want to be in, then enter
 fd() {
@@ -169,7 +181,7 @@ function fp() {
     echo "Copied full path of file: $1"
 }
 
-## Set Terminal window name
+## Set Terminal/iterm window/tab name
 set_term_title(){
    echo -en "\033]0;$1\a"
 }
