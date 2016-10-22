@@ -23,7 +23,7 @@ alias c='clear'
 alias c-='cd -'  # return to previous directory
 alias p='pushd'
 alias o='popd'
-alias rfn='find . -type f -exec stat -f "%m {}" {} \; | sort -n | tail -n 1 | cut -d '"'"' '"'"' -f 2 | pbcopy'  # copies file name of most recently added / modified file in current directory
+alias rfn='find . -maxdepth 1 -type f -exec stat -f "%m {}" {} \; | sort -n | tail -n 1 | cut -d '"'"' '"'"' -f 2 | pbcopy'  # copies file name of most recently added / modified file in current directory
 
 
 # User settings in Sublime text (contains snippets)
