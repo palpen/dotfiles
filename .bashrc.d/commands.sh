@@ -39,9 +39,13 @@ alias src='source ~/.bashrc; echo "New aliasses now activated!"'
 # list current directory in detail---must install GNU Command Line Tools
 # alias la='gls --color -altX'
 alias l='gls --color -tltX | awk "{print \$6, \$7, \$8, \$9}" | column -t'
+alias l3='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n3'
+alias l5='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n5'
+alias l10='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n10'
 alias lm='gls --color -tl'  # list in order created
 alias la='gls --color -lXa | awk "{print \$6, \$7, \$8, \$9}" | column -t'
 alias ld='echo "$(tput setaf 1)Folders in directory:$(tput setaf 4)";ls -d */ | cut -f1 -d'/''  # list directories in folders
+
 
 # danger alert
 alias rm='rm -i'
