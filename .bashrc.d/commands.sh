@@ -39,7 +39,10 @@ alias src='source ~/.bashrc; echo "New aliasses now activated!"'
 # list current directory in detail---must install GNU Command Line Tools
 # alias la='gls --color -altX'
 alias l='gls --color -tltX | awk "{print \$6, \$7, \$8, \$9}" | column -t'
+alias l1='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n1'
+alias l2='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n2'
 alias l3='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n3'
+alias l4='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n4'
 alias l5='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n5'
 alias l10='gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n10'
 alias lm='gls --color -tl'  # list in order created
