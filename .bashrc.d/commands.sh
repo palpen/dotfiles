@@ -216,6 +216,19 @@ clyx(){
 
 }
 
+## open most recent screenshot
+scsh(){
+
+  cd /Users/palermospenano/Desktop/misc/screenshots/.
+
+  # replace space with underscore in screen shot name
+  find . -depth -name '* *' | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
+
+  # list by date and time screen shot was taken
+  gls -tl | awk "{print \$6, \$7, \$8, \$9}" | column -t | head -n10
+
+}
+
 #########
 # notes #
 #########
