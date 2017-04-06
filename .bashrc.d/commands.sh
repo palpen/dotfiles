@@ -126,7 +126,7 @@ fe() {
 
 # fd - cd to selected directory
 # usage: enter `fd`, then search the directory you want to be in, then enter
-fd() {
+cdd() {
   local dir
   dir=$(find ${1:-*} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
