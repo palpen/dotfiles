@@ -112,16 +112,13 @@ alias day='curl wttr.in/toronto'
 
 ## Fuzzy search in terminal using fzf (functions are from fzf wiki on GitHub)!
 
-# fe [FUZZY PATTERN] - Open the selected file with the default editor
-#   - Bypass fuzzy finder if there's only one match (--select-1)
-#   - Exit if there's no match (--exit-0)
-# GET THIS TO WORK WITH SUBLIME TEXT !!!
-fe() {
-  IFS='
-'
-  local declare files=($(fzf --query="$1" --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
-  unset IFS
+# fuzzy search file within current directory and open it (with the application suitable for file extension)
+# usage: enter `of`, then search file, then hit enter
+of() {
+
+  local file
+  file=$(fzf +m -q "$1") && open "$file"
+
 }
 
 # fd - cd to selected directory
