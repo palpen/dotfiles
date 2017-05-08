@@ -107,7 +107,7 @@ alias vimr='cat ~/Desktop/Dropbox/misc/vim_shortcuts_ref/vim_shortcuts.txt | fzf
 alias day='curl wttr.in/toronto'
 
 # open local host on browser and initiate a jekyll local server (used for running website locally)
-alias jks='open -a Safari http://127.0.0.1:4000/;jekyll serve'
+alias jks='open -a Safari http://127.0.0.1:4000/;jekyll serve --watch'
 
 # get current time
 alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
