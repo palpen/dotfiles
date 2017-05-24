@@ -85,6 +85,7 @@ alias pado='cd "/Users/palermospenano/Library/Application Support/Stata/ado/pers
 # open stata and cd into current directory
 alias tstata='/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp'  # stata in terminal (run dofiles in terminal: tstata do my_script.do)
 alias stata='echo "Opening Stata for directory: "; pwd; /Applications/Stata/StataMP.app/Contents/MacOS/StataMP &'  # stata GUI
+# open file in new instance of stata: open -n stata_data.dta
 
 # ipython
 alias ipn='ipython notebook'
@@ -124,6 +125,13 @@ of() {
 
   local file
   file=$(fzf +m -q "$1") && open "$file"
+
+}
+
+ofn() {
+
+  local file
+  file=$(fzf +m -q "$1") && open -n "$file"
 
 }
 
