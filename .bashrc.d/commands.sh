@@ -112,6 +112,9 @@ alias day='curl wttr.in/toronto'
 # open local host on browser and initiate a jekyll local server (used for running website locally)
 alias jks='open -a Safari http://127.0.0.1:4000/;jekyll serve --watch'
 
+# open ipython in browser
+alias ipb='open -a Safari http://localhost:8888/tree'
+
 # get current time
 alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
 
