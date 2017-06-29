@@ -122,6 +122,16 @@ alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
 ## Functions ##
 ###############
 
+# display files that matches simple search pattern with wildcard
+# usage: lsf 'tfp*'; lsf 'tfp*acf*' (a wildcard must always be included in the end!)
+lsf() {
+
+  FILTER="$1"
+  ls -lh ${FILTER} | awk '{print $5, $6, $7, $8,$9}'
+}
+
+
+
 ## Fuzzy search in terminal using fzf (functions are from fzf wiki on GitHub)!
 
 # fuzzy search file within current directory and open it (with the application suitable for file extension)
