@@ -11,8 +11,10 @@ To use this, download the repository to Dropbox then create a symbolic link of .
 (note: I moved my Dropbox folder to the Desktop)
 
 #### Where are PATH variables stored?
-* You've installed an application that you want to use in the command line. To do this, add it to your shell's path in `other_config.sh` found in `.bashrc.d`
-    - export PATH=$PATH:"<path to application>"
+* You've installed an application that you want to use in the command line. To do this, add it to your shell's path in `other_config.sh` found in `.bashrc.d`:
+
+        export PATH=$PATH:<path to application>
+
 ____
 
 #### A better way to view files on Finder from Terminal
