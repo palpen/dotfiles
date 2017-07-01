@@ -19,7 +19,8 @@ export PATH=/usr/local/bin:$PATH
 # allows pandoc to work in sublime text
 export PATH=$PATH:Library/TeX/texbin
 
-
+# mysql
+export PATH=$PATH:/usr/local/mysql/bin
 
 
 
