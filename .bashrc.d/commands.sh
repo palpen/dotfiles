@@ -89,6 +89,10 @@ alias tstata='/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp'  # stata 
 alias stata='echo "Opening Stata for directory: "; pwd; /Applications/Stata/StataMP.app/Contents/MacOS/StataMP &'  # stata GUI
 # open file in new instance of stata: open -n stata_data.dta
 
+# matlab
+alias matlab='/Applications/MATLAB_R2014a.app/bin/matlab -nodesktop -nosplash'  # command line matlab (can plots figures)
+alias matlabp='open /Applications/MATLAB_R2014a_JVMstarter.app'  # pretty version of matlab
+
 # ipython
 alias ipn='ipython notebook'
 
