@@ -127,7 +127,7 @@ alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
 ###############
 
 # cd into blog post directory
-alias jblog ='cd /Users/palermospenano/Desktop/github_proj/palpen_articles/_posts'
+alias jblog='cd /Users/palermospenano/Desktop/github_proj/palpen_articles/_posts; echo "cd into blog post directory"'
 
 # automatically creates the necessary boilerplate for a jekyll post, including appropriate filename
 # usage: njp "This is a post title"
