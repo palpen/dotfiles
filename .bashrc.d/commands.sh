@@ -126,6 +126,23 @@ alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
 ## Functions ##
 ###############
 
+# cd into blog post directory
+alias jblog ='cd /Users/palermospenano/Desktop/github_proj/palpen_articles/_posts'
+
+# automatically creates the necessary boilerplate for a jekyll post, including appropriate filename
+# usage: njp "This is a post title"
+# source: http://ethanclevenger.com/Command-Line-Creating-Jekyll-Posts/
+function njp() {
+    mydate=`date +%Y-%m-%d`
+    post=${1// /-}
+    filename="$mydate-$post.md"
+    touch "$filename"
+
+    # note -- option below avoids invalid option error due to --- in string
+    printf -- "---\nlayout: post\ntitle: $1\n---\n" > $filename
+    }
+
+
 # display files that matches simple search pattern with wildcard
 # usage: lsf 'tfp*'; lsf 'tfp*acf*' (a wildcard must always be included in the end!)
 lsf() {
