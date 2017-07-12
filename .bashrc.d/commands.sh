@@ -278,6 +278,32 @@ scsh(){
 
 }
 
+
+# append the date when file was created at end of the filename (txt file only)
+# usage: fndate file.txt
+fndate(){
+
+  DOC_NAME="$1"
+
+  FILENAME=$(basename "$DOC_NAME")
+
+  # get file extension
+  extension="${FILENAME#*.}"
+
+  # get basename of file (no extensions)
+  FILENAME="${FILENAME%.*}"
+
+  D=$(stat -nf'%B' $DOC_NAME)  # get date in seconds since epoch date
+  DF=$(date -r $D '+%Y-%m-%d')  # get date in years, month, day
+
+  echo "${DOC_NAME} was created on ${DF}"
+
+  # mv $DOC_NAME "${FILENAME}-${DF}.${extension}"
+
+}
+
+
+
 #########
 # notes #
 #########
