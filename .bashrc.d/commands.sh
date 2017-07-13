@@ -132,16 +132,28 @@ alias jblog='cd /Users/palermospenano/Desktop/github_proj/palpen_articles/_posts
 # automatically creates the necessary boilerplate for a jekyll post, including appropriate filename
 # usage: njp "This is a post title"
 # source: http://ethanclevenger.com/Command-Line-Creating-Jekyll-Posts/
-function njp() {
+function new_jekyll_post() {
     mydate=`date +%Y-%m-%d`
     post=${1// /-}
     filename="$mydate-$post.md"
     touch "$filename"
 
+    # print YAML stuff at the top of filename
     # note -- option below avoids invalid option error due to --- in string
     printf -- "---\nlayout: post\ntitle: $1\n---\n" > $filename
+
+    echo "${filename}"
     }
 
+# use new_jekyll_post function to create new post then open  in sublime text
+# usage: jp "post title"
+function jp {
+
+  TITLE="$1"
+  new_jekyll_post "${TITLE}" | xargs open -a "/Applications/Sublime Text.app"
+
+
+}
 
 # display files that matches simple search pattern with wildcard
 # usage: lsf 'tfp*'; lsf 'tfp*acf*' (a wildcard must always be included in the end!)
