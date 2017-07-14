@@ -310,7 +310,7 @@ fndate(){
 
   echo "${DOC_NAME} was created on ${DF}"
 
-  # mv $DOC_NAME "${FILENAME}-${DF}.${extension}"
+  mv $DOC_NAME "${FILENAME}-${DF}.${extension}"
 
 }
 
