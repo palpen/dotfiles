@@ -270,7 +270,7 @@ clyx(){
     FILENAME="${FILENAME%.*}"
     echo $FILENAME
 
-    DATE=`date +%d%b%Y`
+    DATE=`date +%Y-%m-%d`
 
     /Applications/LyX.app/Contents/MacOS/lyx -e pdf2 "$DOC_NAME"
     mv "./$FILENAME.pdf" "$DESTINATION_PATH/${FILENAME}_${DATE}.pdf"
