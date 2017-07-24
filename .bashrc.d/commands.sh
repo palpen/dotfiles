@@ -140,7 +140,7 @@ function new_jekyll_post() {
 
     # print YAML stuff at the top of filename
     # note -- option below avoids invalid option error due to --- in string
-    printf -- "---\nlayout: post\ntitle: $1\ncomments: true---\n" > $filename
+    printf -- "---\nlayout: post\ntitle: $1\ncomments: true\n---\n" > $filename
 
     echo "${filename}"
     }
