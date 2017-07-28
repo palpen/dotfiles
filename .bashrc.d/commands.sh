@@ -205,6 +205,17 @@ cdf() {
 function cdl() { cd "$@" && l; }
 
 
+## copy a filename to clipboard using fzf
+cf() {
+
+    local file
+    file=$(fzf +m -q "$1") && printf '%s' "$file" | pbcopy
+
+    echo "Copied filename of: $file"
+
+}
+
+
 ## block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
 
 # list of websites to block
@@ -236,14 +247,6 @@ workc() {
 	defaults write org.eyebeam.SelfControl HostBlacklist -array ${BAD_WEBSITES[*]}
 	sudo /Applications/SelfControl.app/Contents/MacOS/org.eyebeam.SelfControl $(id -u $(whoami)) --install
 }
-
-
-## copy a filename to clipboard
-copyfilename() {
-    printf '%s\n' * | grep $1 | tr -d "\n" | pbcopy
-    echo "Copied filename of: $1"
-}
-alias cf='copyfilename '
 
 
 ## copy full path of file to clipboard
