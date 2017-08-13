@@ -1,8 +1,8 @@
 # PATHs and other shell configurations
 
 # added by Anaconda 2.1.0 installer
-export PATH="/Users/palermospenano/anaconda/bin:$PATH"
-export PATH="/Users/palermospenano/anaconda2/bin:$PATH"
+# export PATH="/Users/palermospenano/anaconda/bin:$PATH"
+# export PATH="/Users/palermospenano/anaconda2/bin:$PATH"
 
 # Add stata to shell path
 export PATH=$PATH:/Users/palermospenano/Applications/Stata/StataMP.app/Contents/MacOS
