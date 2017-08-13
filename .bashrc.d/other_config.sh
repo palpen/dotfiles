@@ -4,6 +4,9 @@
 # export PATH="/Users/palermospenano/anaconda/bin:$PATH"
 # export PATH="/Users/palermospenano/anaconda2/bin:$PATH"
 
+# anaconda version 3 (with python 3) path
+export PATH="/Users/palermospenano/anaconda3/bin:$PATH"
+
 # Add stata to shell path
 export PATH=$PATH:/Users/palermospenano/Applications/Stata/StataMP.app/Contents/MacOS
 
