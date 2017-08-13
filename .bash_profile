@@ -5,5 +5,5 @@
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
-# added by Anaconda2 2.5.0 installer
-export PATH="/Users/palermospenano/anaconda2/bin:$PATH"
+# added by Anaconda2 2.5.0 installer OLD ANACONDA
+# export PATH="/Users/palermospenano/anaconda2/bin:$PATH"
