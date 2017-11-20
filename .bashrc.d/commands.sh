@@ -122,6 +122,10 @@ alias ipb='open -a Safari http://localhost:8888/tree'
 # get current time
 alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
 
+# check if currently in a virtualenv
+# raw code: python -c 'import sys; print("In virtuaenv" if hasattr(sys, "real_prefix") else "Not in virtenv")'
+alias checkve='python -c '"'"'import sys; print("In virtuaenv" if hasattr(sys, "real_prefix") else "Not in virtenv")'"'"''
+
 ###############
 ## Functions ##
 ###############
@@ -316,7 +320,6 @@ fndate(){
   mv $DOC_NAME "${FILENAME}-${DF}.${extension}"
 
 }
-
 
 
 #########
