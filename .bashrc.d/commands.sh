@@ -110,6 +110,9 @@ alias tt='open -a safari http://lifehacker.com/5155450/todotxt-cli-manages-your-
 # vim reference using fzf (needs a text file containing vim keys)
 alias vimr='cat ~/Desktop/Dropbox/misc/vim_shortcuts_ref/vim_shortcuts.txt | fzf'
 
+# macvim (opens a new instance of MacVim application)
+alias mvim='open -a macvim'
+
 # weather
 alias day='curl wttr.in/toronto'
 
