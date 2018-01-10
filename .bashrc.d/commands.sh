@@ -72,7 +72,7 @@ alias glg='git lg'
 alias gcl='git clone'
 alias gro='git config --get remote.origin.url'
 alias lgr='echo "Listing your github repositories";curl https://api.github.com/users/palpen/repos | grep -o "git@[^\"]*"'  # list github repositories
-alias lgrh='echo "List GitHub clone url";curl https://api.github.com/users/palpen/repos | grep  -o "https://github.com/[^\"]*\.git"'
+alias lgrh='echo "List GitHub clone url";curl https://api.github.com/users/palpen/repos?per_page=100 | grep  -o "https://github.com/[^\"]*\.git"'
 
 # csvkit --- TO ADD
 # csvlook, csvlook | grep, csvlook | head, csvcut,
