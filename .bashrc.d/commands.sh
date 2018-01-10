@@ -129,6 +129,9 @@ alias gt='date "+%H:%M"| tr -d "\n" | pbcopy'
 # raw code: python -c 'import sys; print("In virtuaenv" if hasattr(sys, "real_prefix") else "Not in virtenv")'
 alias checkve='python -c '"'"'import sys; print("In virtuaenv" if hasattr(sys, "real_prefix") else "Not in virtenv")'"'"''
 
+# open google calendar in browser
+alias gcal='open -a  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome https://calendar.google.com/calendar/r'
+
 ###############
 ## Functions ##
 ###############
@@ -226,7 +229,7 @@ cf() {
 ## block out dist racting websites for fixed duration (to block an hour execute `work 1` in command line)
 
 # list of websites to block
-BAD_WEBSITES=('"www.andrewgelman.com"' '"news.ycombinator.com"' '"www.quora.com"' '"www.marginalrevolution.com"' '"www.nytimes.com"' '"www.bleacherreport.com"' '"www.amazon.ca"' '"www.amazon.com"' '"www.youtube.com"' '"www.nba.com"' '"www.netflix.ca"')
+BAD_WEBSITES=('"www.andrewgelman.com"' '"news.ycombinator.com"' '"www.quora.com"' '"www.nytimes.com"' '"www.bleacherreport.com"' '"www.amazon.ca"' '"www.amazon.com"' '"www.youtube.com"' '"www.nba.com"' '"www.netflix.ca"' '"www.twitter.com"')
 
 # Only good for 1, 2, or 3 hours
 work() {
