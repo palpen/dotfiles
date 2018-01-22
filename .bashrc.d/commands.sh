@@ -132,6 +132,11 @@ alias checkve='python -c '"'"'import sys; print("In virtuaenv" if hasattr(sys, "
 # open google calendar in browser
 alias gcal='open -a  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome https://calendar.google.com/calendar/r'
 
+# jupyter notebook themes
+# from https://github.com/dunovank/jupyter-themes
+alias darkjn='jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T; echo "Dark jupyter notebook"'
+alias lightjn='jt -t grade3 -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T; echo "Light jupyter notebook"'
+
 ###############
 ## Functions ##
 ###############
